@@ -47,7 +47,7 @@ def plot_candlestick_data(ohlc_df):
 
         # Update layout for the figure
         fig.update_layout(
-            title="Candlestick Chart",
+            title=f"Candlestick Chart for {symbol}",
             xaxis_title="Date",
             yaxis_title="Price",
             xaxis_rangeslider_visible=False  # Hide the range slider for a cleaner chart
@@ -58,7 +58,7 @@ def plot_candlestick_data(ohlc_df):
 # Streamlit layout
 st.title("SNTJ Stock Screener")
 
-symbol = st.text_input("Enter a Stock Symbol", "AAPL")
+symbol = "AAPL" # SET SYMBOL HERE
 
 if symbol:
     ohlc_data = get_ohlc_data(symbol)
